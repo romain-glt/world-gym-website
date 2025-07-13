@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/png" href="logo.png">
+  <title>Contact – World Gym & Boxing</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <body class="contact-page">
+
+
+  <header>
+  <div class="logo">
+    <img src="logo.png" alt="World Gym Logo" />
+    <h1>WORLD GYM <span>& BOXING</span></h1>
+  </div>
+
+  <!-- Burger icon for mobile -->
+  <div class="burger" id="burger">&#9776;</div>
+
+  <!-- Navigation menu -->
+  <nav id="nav-menu">
+    <a href="index.html">Home</a>
+    <a href="index.html#services">Services</a>
+    <a href="contact.html">Contact</a>
+    <a href="#">VN</a>
+  </nav>
+</header>
+
+
+  <main>
+    <section class="contact">
+      <h2>Contact Us</h2>
+      <p><strong>Address:</strong> 52 Quảng An – Tây Hồ, Hanoi</p>
+      <p><strong>Phone:</strong> <a href="tel:+84938413261">0938 413 261</a></p>
+      <p><strong>GPS Location:</strong>
+        <a href="https://www.google.com/maps/place/World+Gym+%26+Boxing/@21.060855,105.826969,17.8z/data=!4m15!1m8!3m7!1s0x3135aaff4880f503:0x35ec44396989e029!2zNTIgUC4gUXXhuqNuZyBBbiwgUXXhuqNuZyBBbiwgVMOieSBI4buTLCBIw6AgTuG7mWk!3b1!8m2!3d21.0610378!4d105.8279849!16s%2Fg%2F11fx3rxgw9!3m5!1s0x3135ab4797547cd3:0xc9614671ebd2d5b2!8m2!3d21.0610887!4d105.8277674!16s%2Fg%2F11x6xsdvb6?entry=ttu&g_ep=EgoyMDI1MDcwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+          View on Google Maps 📍
+        </a>
+      </p>
+
+      <form action="https://formsubmit.co/romainglachant@gmail.com" method="POST" class="contact-form">
+        <input type="hidden" name="_captcha" value="false">
+
+
+        <div class="form-group">
+          <input type="text" name="firstname" placeholder="First name" required 
+          oninvalid="this.setCustomValidity('Please enter your first name')"
+          oninput="this.setCustomValidity('')"/>
+          <input type="text" name="lastname" placeholder="Last name" required 
+          oninvalid="this.setCustomValidity('Please enter your last name')"
+          oninput="this.setCustomValidity('')" />
+        </div>
+
+        <input type="email" name="email" placeholder="Email address" required 
+        oninvalid="this.setCustomValidity(this.validity.typeMismatch ? 'Please enter a valid email address' : 'Please fill out your email')"
+        oninput="this.setCustomValidity('')" />
+        <textarea name="message" rows="5" placeholder="Your message..." required
+        oninvalid="this.setCustomValidity('Please write your message')"
+        oninput="this.setCustomValidity('')"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+<script src="script.js"></script>  
+</body>
+</html>

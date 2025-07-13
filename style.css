@@ -1,0 +1,494 @@
+/* ===== FONTS ===== */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;600;900&display=swap');
+
+/* ===== VARIABLES ===== */
+:root {
+  --bg: #ffffff;
+  --dark: #121212;
+  --red: #e63946;
+  --gray: #f4f4f4;
+  --accent: #0057ff;
+}
+
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Barlow', sans-serif;
+  background: var(--bg);
+  color: var(--dark);
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* ===== HEADER ===== */
+header {
+  background: var(--dark);
+  color: white;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  position: relative;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.logo h1 {
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.logo h1 span {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 2rem;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: var(--red);
+}
+
+/* ===== HERO ===== */
+.hero {
+  background: url('image1.jpg') center 30% / cover no-repeat;
+  position: relative;
+  padding: 6rem 1rem;
+  text-align: center;
+  color: white;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+/* ===== SERVICES ===== */
+.services {
+  padding: 4rem 2rem;
+  background: var(--bg);
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  position: relative;
+  background-color: var(--dark);
+  color: rgb(255, 255, 255);
+  padding: 2rem 1rem;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: transform 0.3s, background 0.3s;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 180px;
+  overflow: hidden;
+  text-shadow: 1px 1px 2px black;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background-color: var(--red);
+}
+
+/* ===== SERVICE BACKGROUNDS ===== */
+.card.gym {
+  background: url('gym.jpg') center center / cover no-repeat;
+}
+
+.card.boxing {
+  background: url('boxing.jpg') center center / cover no-repeat;
+}
+
+.card.kickboxing {
+  background: url('kickboxing.jpg') center center / cover no-repeat;
+}
+
+.card.muaythai {
+  background: url('muaythai.jpg') center center / cover no-repeat;
+}
+
+.card.crossfit {
+  background: url('crossfit.jpg') center center / cover no-repeat;
+}
+
+/* ===== SERVICE DETAIL PAGE ===== */
+.service-detail {
+  padding: 0;
+}
+
+.service-banner {
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+}
+
+.service-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.service-banner h2 {
+  position: relative;
+  z-index: 2;
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.gym-banner { background-image: url('gym-banner.jpg'); }
+.boxing-banner { background-image: url('boxing-banner.jpg'); }
+kickboxing-banner { background-image: url('kickboxing-banner.jpg'); }
+.muaythai-banner { background-image: url('muaythai-banner.jpg'); }
+.crossfit-banner { background-image: url('crossfit-banner.jpg'); }
+
+.service-content {
+  padding: 3rem 2rem;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+.service-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.service-content p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  background: var(--dark);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: var(--red);
+}
+
+/* ===== CONTACT PAGE ===== */
+.contact {
+  background: var(--gray);
+  padding: 3rem 2rem;
+  text-align: center;
+  backdrop-filter: blur(2px);
+  border-radius: 10px;
+  max-width: 700px;
+  margin: 2rem auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.contact h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.contact p {
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+}
+
+.contact a {
+  color: var(--red);
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 2rem auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form .form-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.contact-form .form-group input {
+  flex: 1;
+  min-width: 45%;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form button {
+  padding: 0.8rem 1.5rem;
+  background-color: var(--dark);
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: var(--red);
+}
+
+body.contact-page {
+  background: url('contact.jpg') center center / cover no-repeat fixed;
+  background-color: #000;
+}
+
+/* ===== PRELOADER ===== */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--dark);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  font-family: 'Barlow', sans-serif;
+}
+
+.loader .logo-text {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--red);
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+}
+
+.loader .loading-bar {
+  width: 100px;
+  height: 4px;
+  background: var(--red);
+  animation: loading 1.5s infinite alternate;
+}
+
+.loader .loading-text {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+@keyframes loading {
+  0% { transform: scaleX(0.2); }
+  100% { transform: scaleX(1); }
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: var(--dark);
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+
+/* ===== MENU BURGER ONLY FOR MOBILE WITH ANIMATION ===== */
+.burger {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem;              /* ajoute un peu d'espace cliquable */
+  margin-left: auto;
+  align-self: center;           /* centre verticalement */
+}
+
+
+@media (max-width: 768px) {
+  .burger {
+    display: block;
+    margin-left: auto;
+  }
+
+  nav {
+    max-height: 0;
+    overflow: hidden;
+    flex-direction: column;
+    width: 100%;
+    background: var(--dark);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 999;
+    transition: max-height 0.4s ease-in-out;
+  }
+
+  nav.active {
+    max-height: 500px;
+  }
+
+  nav a {
+    padding: 1rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    text-align: left;
+  }
+
+ header {
+  background: var(--dark);
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  position: relative;
+  height: auto;
+  min-height: 70px;
+}
+
+}
+
+@media (max-width: 600px) {
+  nav a {
+    display: block;
+    margin: 1rem 0 0 0;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card {
+    height: 150px;
+    font-size: 1rem;
+  }
+
+  .service-banner h2 {
+    font-size: 2.2rem;
+  }
+
+}
+@media (max-width: 768px) {
+  .logo h1 {
+    font-size: 1.2rem;
+  }
+
+  .logo {
+    gap: 0.5rem;
+  }
+  .logo img {
+  height: 40px;
+  }
+
+}
+.video-section {
+  padding: 3rem 2rem;
+  background: var(--gray);
+  text-align: center;
+}
+
+.video-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.video-wrapper {
+  max-width: 700px;
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.video-wrapper video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
